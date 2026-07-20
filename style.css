@@ -1,0 +1,40 @@
+*{box-sizing:border-box}
+body{margin:0;background:#07111f;color:#eef5ff;font-family:Arial,"Noto Sans Thai",sans-serif}
+button,input{font:inherit}
+button{cursor:pointer;border:0;border-radius:10px;padding:10px 16px;background:#263b56;color:white}
+button:hover{filter:brightness(1.15)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.wrap{max-width:1250px;margin:auto;padding:16px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+header h1{margin:0;font-size:clamp(20px,3vw,32px);flex:1}
+header span{opacity:.7;font-size:13px}
+.panel{background:#101d2d;border:1px solid #263c55;border-radius:16px;padding:16px;box-shadow:0 8px 30px #0004}
+.start{text-align:center;max-width:560px;margin:7vh auto}
+.icon{font-size:56px}
+.primary{background:#3978d8;font-weight:bold}
+.join{display:flex;gap:8px;margin-top:12px}
+.join input{min-width:0;flex:1;padding:10px;border-radius:10px;border:1px solid #405a75;background:#081321;color:white}
+.small{opacity:.65;font-size:13px}
+#roomCodeDisplay{font-size:30px;font-weight:bold;letter-spacing:5px;margin-top:10px}
+.hidden{display:none!important}
+.event-overlay{position:fixed;inset:0;background:#000b;display:grid;place-items:center;z-index:20;padding:20px}
+.event-card{width:min(560px,100%);background:#142337;border:1px solid #4b6b91;border-radius:20px;padding:28px;text-align:center;box-shadow:0 20px 80px #000}
+.event-icon{font-size:50px}.guide-text{text-align:left;line-height:1.6}
+.banner{text-align:center;padding:12px;border-radius:12px;background:#152b44;font-weight:bold;margin-bottom:8px}
+.timer{text-align:center;font-size:22px;font-weight:bold;margin:8px}
+.grid{display:grid;grid-template-columns:1fr minmax(180px,260px) 1fr;gap:12px;align-items:start}
+.fighter h2{margin:0 0 10px;font-size:18px}
+.stat{margin-top:8px}.bar{height:10px;background:#29394b;border-radius:99px;overflow:hidden;margin-top:4px}.bar i{display:block;height:100%;width:100%;background:#dc5b6d}.bar.water i{background:#55aee8}
+.statuses{display:flex;flex-wrap:wrap;gap:6px;min-height:28px}
+.status{padding:4px 7px;border-radius:8px;background:#26384d;font-size:12px}.status.bad{background:#5a2938}.status.good{background:#285343}
+.last{min-height:155px;background:#101d2d;border:1px solid #263c55;border-radius:16px;padding:12px;text-align:center}
+.last h3{font-size:14px}.last p{font-size:12px;margin:6px 0}.last .emoji{font-size:35px}
+.round{text-align:center;margin-top:10px;font-size:18px}
+.handbox{margin-top:12px}.handtitle{display:flex;justify-content:space-between;align-items:center;gap:10px}.handtitle h2{margin:0;font-size:18px}.handtitle span{font-size:12px;opacity:.7}
+.hand{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:12px}
+.card{text-align:left;min-height:160px;background:#182b42;border:1px solid #385574;padding:12px;transition:.2s}
+.card:hover:not(:disabled){transform:translateY(-4px);border-color:#73a9e8}
+.cardtop{display:flex;justify-content:space-between;align-items:center}.emoji{font-size:25px}.type{font-size:10px;opacity:.6}
+.card h3{font-size:14px;margin:8px 0}.real,.organ{font-size:11px;line-height:1.45;color:#c3d1e1}
+@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}.grid>div:nth-child(2){grid-column:1/-1;grid-row:1}.fighter{padding:12px}.hand{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.wrap{padding:8px}.grid{gap:8px}.hand{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.card{padding:8px;min-height:145px}.card h3{font-size:12px}.real,.organ{font-size:10px}header span{display:none}}
